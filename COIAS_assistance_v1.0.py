@@ -78,7 +78,7 @@ class TimeStampedFitWindow(QWidget):
     def __init__(self):
         super().__init__()
 
-        self.setWindowTitle("時刻付き点と近似直線＋推定位置＋右クリック削除")
+        self.setWindowTitle("補助画面")
         self.setGeometry(100, 100, 900, 650)
 
         # ★ キーボードフォーカスを受け取らない（下のアプリにキーを渡す）
@@ -128,9 +128,9 @@ class TimeStampedFitWindow(QWidget):
         self.reset_button.setStyleSheet("background-color: white;")
 
         # --------------------------------------------------------
-        # ★ 下段に「クリック点用の時刻取得」ボタン
+        # ★ 下段に「マークの時刻取得」ボタン
         # --------------------------------------------------------
-        self.capture_point_button = QPushButton("クリック点時刻取得", self)
+        self.capture_point_button = QPushButton("マーク時刻取得", self)
         self.capture_point_button.move(10, 50)
         self.capture_point_button.clicked.connect(self.capture_for_point)
         self.capture_point_button.setStyleSheet("background-color: white;")
